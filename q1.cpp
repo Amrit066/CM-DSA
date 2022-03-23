@@ -4,8 +4,8 @@ using namespace std;
 int largetSumSubarray(int arr[],int n){
     int largestSum=0;
 
-    for(int i=0;i<n;i++){
-        for(int j=i;i<n;j++){
+    for(int i=0;i<n;i++){4
+        for(int j=i;j<n;j++){
             int temp=0;
             for(int k=i;k<=j;k++){
                 temp+=arr[k];
