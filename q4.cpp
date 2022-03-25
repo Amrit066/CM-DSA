@@ -3,7 +3,7 @@
 using namespace std;
 
 int lowerBound(vector<int> A, int Val){
-    int lowerBound=A[0];
+    int lowerBound=-1;
 
     for(int i=0;i<A .size();i++){
         if(A[i]>lowerBound && A[i]<=Val){
