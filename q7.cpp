@@ -2,16 +2,18 @@
 #include<vector>
 using namespace std;
 
+
 vector<int> BubbleSort(vector<int> a, bool flag){
     bool isSorted;
     if(flag){
+        cout<<"Size:"<<a.size()<<endl;
         for(int i=0;i<a.size() ;i++){
             isSorted=true;
-            for(int j=i+1;j<a.size();j++){
-                if(a[j]<a[i]){
+            for(int j=0;j<a.size()-i-1;j++){
+                if(a[j]>a[j+1]){
                     int temp=a[j];
-                    a[j]=a[i];
-                    a[i]=temp;
+                    a[j]=a[j+1];
+                    a[j+1]=temp;
                     isSorted=false;
                 }
             }
@@ -21,13 +23,14 @@ vector<int> BubbleSort(vector<int> a, bool flag){
         }
     }
     else{
+        cout<<"Size:"<<a.size()<<endl;
         for(int i=0;i<a.size() ;i++){
             isSorted=true;
-            for(int j=i+1;j<a.size();j++){
-                if(a[j]>a[i]){
+            for(int j=0;j<a.size()-i-1;j++){
+                if(a[j]<a[j+1]){
                     int temp=a[j];
-                    a[j]=a[i];
-                    a[i]=temp;
+                    a[j]=a[j+1];
+                    a[j+1]=temp;
                     isSorted=false;
                 }
             }
